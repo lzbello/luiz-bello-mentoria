@@ -1,0 +1,117 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111827;
+    color: #fff;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease, pointer-events 0.3s ease;
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.headerVisible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.headerCta {
+    background: linear-gradient(to right, #fbbf24, #f97316, #c2410c);
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease-in-out;
+}
+
+.headerCta:active {
+    transform: scale(0.98);
+}
+
+/* Layout principal */
+.container {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 100px 16px 40px; /* 100px para não ficar atrás do header */
+}
+
+.card {
+    width: 100%;
+    max-width: 900px;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+.eventTitle {
+    margin: 16px 0 8px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.gridInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 12px 0 24px;
+}
+
+@media (min-width: 600px) {
+    .gridInfo {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.label {
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* Botão principal */
+.buyBtn {
+    margin-top: 20px;
+    width: 100%;
+    background: linear-gradient(90deg, #fbbf24, #f97316, #c2410c);
+    color: #fff;
+    padding: 14px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.08s ease, filter 0.2s ease;
+}
+
+.buyBtn:hover {
+    filter: brightness(1.05);
+}
+
+.buyBtn:active {
+    transform: translateY(1px);
+}
